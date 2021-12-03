@@ -1,0 +1,239 @@
+:root{
+    --fundo: #E3F2FD;
+    --texto: #37474F;
+    --comandos: #BBDEFB;
+    --grupos: #FFFFFF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--fundo);
+    overflow-x: hidden;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--texto);
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--grupos);
+    width: 100%;
+    padding: 20px 8px;
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.description{
+    margin-top: 25px;
+    line-height: 1.5rem;
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+}
+
+.description span{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.commands-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.commands-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 10px 8px;
+    background-color: var(--comandos);
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.commands-list h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.commands-list p{
+    line-height: 1.5rem;
+    text-align: justify;
+    padding: 0 30px;
+}
+
+.commands-list span{
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.images-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--comandos);
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.images-project h6{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.commands-list em{
+    color: red;
+    border: 1px solid lightgray;
+    padding: 2px 10px;
+    background-color: var(--grupos);
+}
+
+.commands-text{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container-single{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--texto);
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.group-single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--grupos);
+    width: 100%;
+    padding: 20px 8px;
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.description-single{
+    margin-top: 25px;
+    line-height: 1.5rem;
+    width: 100%;
+    font-style: italic;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.description-single span{
+    font-weight: bold;
+}
+
+.description-single a{
+    color: #C62828;
+}
+
+.description-text{
+    margin-top: 25px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.description-text span{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.description-text ul{
+    padding: 0 20px;
+}
+
+.description-text li{
+    margin-bottom: 5px;
+}
+
+.description-text a{
+    color: #C62828;
+}
+
+.description-text table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.description-text table tr, th{
+    border: 1px solid #212121;
+    text-align: center;
+    font-weight: bold;
+}
+
+.description-text table tr:nth-of-type(1){
+    background: #9E9E9E;
+}
+
+.description-text table td{
+    font-weight: normal;
+    text-align: left;
+    padding-left: 15px;
+    border: 1px solid #212121;
+}
+
+.quote{
+    border-left: 3px solid #9E9E9E;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #F5F5F5;
+}
+
+.img-typora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+}
+
+.img-typora h6{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

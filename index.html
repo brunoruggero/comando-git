@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Comandos Github</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Comando básicos Github</h1>
+            <div class="group">
+                <p>Esse tutorial tem o intuito de apresentar comandos básico e úteis para utilização no Github e versionamento de projetos.</p>
+                <div class="description">
+                    <p>
+                        <span>Descrição:</span> O Git é um sistema de controle de revisão distribuído, rápido, escalável e com um conjunto de comandos incomumente rico que oferece operações de alto nível e acesso completo aos seus recursos.
+                    </p>
+                </div><!--description-->    
+            </div><!--group-->           
+        </div><!--container-->
+    </header>
+
+    <div class="commands-wrapper">
+        <div class="commands-list">
+            <h3>Abrindo projeto com Git Bash</h3>
+            <p>Primeiramente vamos abrir a pasta do nosso projeto para podermos iniciar o repositório. Após abrir a posta do projeto 
+                clique com o botão direito na área e em seguida clique em <span>Git Bash Here</span> para abrir o terminal.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/pasta.jpg" alt="Pasta Projeto"/>
+            <h6>Figura 1: Acessando Git Bash na pasta do projeto</h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Iniciando Repositório no projeto local</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git init</em><br><br> Note que após executar o comando ele iniciou um repositório vázio no diretório local.</p>
+            <p>Esse comando cria um repositório Git vazio, basicamente um diretório <em>.git</em> com subdiretórios para os arquivos <em>objects</em>, <em>refs/heads</em>,
+                <em>refs/tags</em> e arquivos modelo.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/init.jpg" alt="Git Init"/>
+            <h6>Figura 2: Executando comando para iniciar repositório local</h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Adicionando os arquivos no repositório local</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git add *</em></p>
+            <p>
+                Este comando atualiza o índice utilizando o conteúdo atual encontrado na árvore de trabalho para preparar o conteúdo para o próximo commit. 
+                Em geral ele adiciona o conteúdo atual dos caminhos existentes como um todo, mas com algumas opções ele também pode ser utilizado para adicionar o 
+                conteúdo com apenas a parte das alterações aplicadas nos arquivos da árvore de trabalho ou remover os caminhos que não existam mais na árvore de trabalho.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/add.jpg" alt="Git Add"/>
+            <h6>Figura 3: Adicionando os arquivos no repositório<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Executando Commit no repositório</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git commint -m "Mensagem do commit"</em></p>
+            <p>
+                Cria um novo commit que tenha todos os conteúdos atuais do índice e a mensagem informada no registro log descrevendo as alterações. 
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/commit.jpg" alt="Git Add"/>
+            <h6>Figura 3: Executando commit no repositório<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Monitorando o status do repositório</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git status</em><br></p>
+            <p>
+                Exibe os caminhos que têm diferenças entre o arquivo do índice e o commit atual no <em>HEAD</em>, os caminhos que têm diferenças entre a 
+                árvore de trabalho e o arquivo do índice, os caminhos na árvore de trabalho que não são rastreados pelo Git.
+            </p>
+            <p class="commands-text">
+                <span>Figura 4:</span> mostramos o status do repositório correto com todos os arquivos adicionados no repositório. <br>
+                <span>Figura 5:</span> mostramos o status do repositório com erros, pois houve alteração nos arquivos dos repositório e para corrigir esse
+                    erro execute o comando <em>git add *</em> para que o status seja corrigido.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/status.jpg" alt="Git Add"/>
+            <h6>Figura 4: Status exibido com sucesso.<h6>
+        </div><!--images-project-->
+        <div class="images-project">
+            <img src="images/status-erro.jpg" alt="Git Status"/>
+            <h6>Figura 5: Status exibido com problemas.<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Listando as configurações do git</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git config --list</em></p>
+            <p>
+                Lista todas as variáveis definidas no arquivo de configuração, junto com seus valores.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/list.jpg" alt="Git Config"/>
+            <h6>Figura 6: Listando as configuração do git<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Configurando as credenciais do git</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git config --global (credencial que vamos configurar)</em></p>
+            <p>
+                Com este comando estaremos configurando as crendenciais de acesso ao github, iniciaremos configurando a credencial <em>user.name</em>, 
+                em seguida a <em>user.email</em> e por último a <em>user.nickname</em>. <br><br>
+                <em>git config --global user.name "(Informe o nome desejado)"</em> <br><br>
+                <em>git config --global user.email "(Informe o e-mail de cadastrado do Github)"</em> <br><br>
+                <em>git config --global user.nickname "(Informe o usuário cadastrado do Github)"</em> <br><br>
+                <b>Observação: as informações das crendenciais devem estar entre "".</b><br><br>
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/name.jpg" alt="Git Config Global Name"/>
+            <h6>Figura 7: Configurando crendencial nome<h6>
+        </div><!--images-project-->
+        <div class="images-project">
+            <img src="images/email.jpg" alt="Git Config Global Email"/>
+            <h6>Figura 8: Configurando crendencial e-mail<h6>
+        </div><!--images-project-->
+        <div class="images-project">
+            <img src="images/nickname.jpg" alt="Git Config Global Nickname"/>
+            <h6>Figura 9: Configurando crendencial nickname<h6>
+        </div><!--images-project-->
+
+
+        <div class="commands-list">
+            <h3>Corrigindo as credenciais do git</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git config --global --unset user.name</em></p>
+            <p>
+                Com este comando estaremos removendo a crendencial que foi configurada errada. <br><br> Ao executar o comando <em>git config --list</em>, 
+                você verá que a crendial <em>user.nome</em> não aparecerá na lista, assim você poderá adicionar a crendial novamente a lista.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/remove-crendencial.jpg" alt="Git Config Unset"/>
+            <h6>Figura 10: Corrigindo a crendencial<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Criando o repositório no Github</h3>
+            <p>
+                Nosso próximo passo é criar nosso repositório no site do Github. Para isso acesse sua conta no Github e crie o novo repositório.
+            </p>
+            <p class="commands-text">
+                <span>Figura 12:</span> tela onde efetuaremos as configurações do repositório no github, conforme mostrado na imagem. <br>
+                <span>Figura 13:</span> nessa tela exibe uma configuração rápida do repositório, note que os passos descritos são praticamente os mesmo
+                já descritos a cima. <br><br>
+                <b>Observação: Nessa tela a única informação que vamos copiar será o link HTTPS do nosso repositório, como mostrado na
+                    Figura 14.
+                </b><br><br>
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/cria-repo.jpg" alt="Criando repositório"/>
+            <h6>Figura 11: Corrigindo novo repositório<h6>
+        </div><!--images-project-->
+
+        <div class="images-project">
+            <img src="images/tela-repo.jpg" alt="Novo repositório"/>
+            <h6>Figura 12: Criando novo repositório<h6>
+        </div><!--images-project-->
+
+        <div class="images-project">
+            <img src="images/repo-criado.jpg" alt="Repositório criado"/>
+            <h6>Figura 13: Novo repositório criado<h6>
+        </div><!--images-project-->
+        
+        <div class="images-project">
+            <img src="images/link-repo.jpg" alt="Repositório criado"/>
+            <h6>Figura 14: Link HTTPS do repositório<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Adicionando a origem no repositório Github</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git remote add origin + (link do repositório)</em></p>
+            <p>
+                Nesse passo iremos adicionar o <em>origin</em> no repositório que criamos no Github.
+            </p>
+            <p class="commands-text">
+                <em>git remote</em> - Gerencie o conjunto dos repositórios monitorados. <br>
+                <em>add</em> - Adiciona um ramo remoto chamado (nome) para o repositório na (url). <br><br>
+                <span>Observação:</span> O link do repositório é o HTTPS mostrado na Figura 14 do passo anterior.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/origem.jpg" alt="Git Remote Origin"/>
+            <h6>Figura 15: Adicionando origin no repositório Github<h6>
+        </div><!--images-project-->
+
+        <div class="commands-list">
+            <h3>Listando os repositórios remotos adicionados</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git remote -v</em></p>
+            <p>
+                Com esse comando listamos os repositórios remotos adicionados com o comando <em>git remote add origin + link</em>
+            </p>
+            <p class="commands-text">
+                <em>git remote</em> - Gerencie o conjunto dos repositórios monitorados. <br>
+                <em>add</em> - Adiciona um ramo remoto chamado (nome) para o repositório na (url). <br><br>
+                <span>Observação:</span> O link do repositório é o HTTPS mostrado na Figura 14 do passo anterior.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/list-origem.jpg" alt="Listando remotos"/>
+            <h6>Figura 16: Listando os repositórios remotos.<h6>
+        </div><!--images-project-->
+
+        <div class="container-single">
+            <div class="group-single">
+                <p>Antes de continuarmos com nosso tutorial iremos criar o nosso arquivo <b>README.md</b> para o nosso repositório.</p>
+                <div class="description-single">
+                    <p>
+                        <span>Mas antes precisamos entender o que é a extensão .md - Markdown</span><br><br> 
+                        <span>O que é Markdown?</span><br><br>
+                        
+                        De acordo com a Wikipédia: <br><br>
+
+                        <div class="quote">
+                            <q>Markdown é uma linguagem de marcação leve com sintaxe de formatação de texto simples projetada para que ela 
+                                possa ser convertida em HTML e muitos outros formatos usando uma ferramenta com o mesmo nome. Markdown é usado 
+                                frequentemente para formatar arquivos readme, para escrever mensagens em fóruns de discussão on-line e para criar 
+                                texto rico usando um editor de texto simples.</q>
+                        </div><!--quote-->
+                        <br>
+                        O Markdown não exites um padrão claramente definido para ele, onde o levou à possuir diferentes fornecedores que
+                        escrevem suas próprias variantes do idioma para corrigir falhas e adicionar recursos faltantes. Temos uma lista de 
+                        versões do Markdown disponível <a href="https://github.com/commonmark/commonmark-spec/wiki/Markdown-Flavors" target="_blank">aqui.</a>
+                    </p>
+                </div><!--description-single-->    
+                
+                <div class="description-text">
+                    <p>
+                        <span>Porque usar o Markdown?</span> <br><br>
+                        
+                        <ul>
+                            <li><b>FÁCIL:</b> A sintaxe é tão fácil que você pode aprender em um minuto ou dois, em seguida, escreva sem perceber nada estranho ou nerd.</li>
+                            <li><b>RÁPIDO:</b> Ele economiza tempo em comparação com outros tipos de arquivos / formatos de texto. Isso ajuda a aumentar a produtividade e os fluxos de trabalho do escritor.</li>
+                            <li><b>LIMPO:</b> Tanto a sintaxe como a saída são limpas, sem confusão com nossos olhos e simples de gerenciar.</li>
+                            <li><b>FLEXÍVEL:</b> Com apenas algumas configurações, o seu texto será traduzido atravessando qualquer plataforma lá fora, editável em qualquer software de edição de texto e conversível para uma ampla variedade de formatos.</li>
+                        </ul><br>
+                        <b>Em resumo</b>, os usuários comuns acharão útil em todos os casos, especialmente quando você precisar de algo melhor 
+                        que o texto simples, mas menos funcional do que o Microsoft Word. <br><br>
+                        <b>Para desenvolvedores</b>, Se você é preguiçoso para escrever código HTML, você vai adorar o markdown. Além disso, 
+                        Github e muitos sites favorecem o markdown para o arquivo readme de projetos. Isso significa que você vai encontrar o 
+                        markdown em sua vida de uma forma ou de outra.
+                    </p><br>
+                    <p>
+                        <span>Ferramentas Markdown</span> <br><br>
+                        Qualquer editor pode ser usado para editar o markdown. No entanto, existem algumas ferramentas que podem ser úteis 
+                        para você quando se trata de editar markdown.
+                        <br><br>
+                        <ul>
+                            <li>
+                                <b><a href="https://stackedit.io/" target="_blank">Stackedit: </a></b>Ferramenta on-line, basta digitar o 
+                                texto normalmente e depois efetuar a formatação. Você não precisa saber a sintaxe.
+                            </li>
+                            <li>
+                                <b><a href="https://dillinger.io/" target="_blank">Dillinger: </a></b>Ferramenta on-line, suporte em exibição ao vivo 
+                                (tela dividida) e exportação para html. Nada muito especial, mas muito limpo e acessível.
+                            </li>
+                            <li>
+                                <b><a href="https://www.typora.io/" target="_blank">Typora: </a></b>Disponível para Mac e Windows, livre de distração, 
+                                vista ao vivo sem parecer, empacotada com muitas outras coisas como Imagens, Listas, Tabelas, Cercas de Código, Blocos de 
+                                Matemática, YAML, Front Matters, Toc.
+                            </li>
+                            <li>
+                                <b><a href="https://chrome.google.com/webstore/detail/minimalist-markdown-edito/pghodfjepegmciihfhdipmimghiakcjf?hl=en" target="_blank">Minimalist Markdown: </a></b>
+                                Aplicativo do Google Chrome. Funciona em todos os lugares se você tiver o Chrome instalado.
+                            </li>
+                            <li>
+                                <b><a href="https://macdown.uranusjr.com/" target="_blank">Macdown: </a></b>O Melhor para Mac.</li>
+                            <li>
+                                <b><a href="http://markdownpad.com/" target="_blank">MarkdownPad: </a></b>O Melhor para Windows.</li>
+                            <li>
+                                <b><a href="https://remarkableapp.github.io/" target="_blank">Remarkable: </a></b>O Melhor para Linux.</li>
+                            <li>
+                                <b><a href="https://www.gitbook.com/" target="_blank">GITBOOK: </a></b>O GitBook é uma ferramenta de publicação 
+                                moderna. Facilitando a escrita e a colaboração. Ambos suportam a Markdown e têm uma estreita relação com o amado 
+                                Github.
+                            </li>
+                        </ul>
+                    </p><br>
+                    <p>
+                        <span>Sintaxes do Markdown</span> <br><br>
+                        Você pode consultar toda a sintaxe do Markdown acessando <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">aqui</a>.
+                        Abaixo listaremos as sintaxes básicas, apenas para exemplificar neste tutorial.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Formato</th>
+                            <th>Sintaxe</th>
+                            <th>Exemplo</th>
+                        </tr>
+                        <tr>
+                            <td>Itálico</td>
+                            <td>*Texto*</td>
+                            <td><i>Meu texto em itálico</i></td>
+                        </tr>
+                        <tr>
+                            <td>Negrito</td>
+                            <td>**Bold**</td>
+                            <td><strong>Meu texto em negrito</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Links inline</td>
+                            <td>[texto](url aqui)</td>
+                            <td>Meu <a href="http://www.github.com">link</a></td>
+                        </tr>
+                        <tr>
+                            <td>Imagens</td>
+                            <td>![Legenda](url da img)</td>
+                            <td>Minha imagem <a target="_blank" href="https://camo.githubusercontent.com/fb936e68a052eca6a4a8cd34217732ae9c54d27b4f926cc0f46213270d9a8983/687474703a2f2f692e696d6775722e636f6d2f68524c75657a322e706e67">
+                                <img src="https://camo.githubusercontent.com/fb936e68a052eca6a4a8cd34217732ae9c54d27b4f926cc0f46213270d9a8983/687474703a2f2f692e696d6775722e636f6d2f68524c75657a322e706e67" alt="image" 
+                                data-canonical-src="http://i.imgur.com/hRLuez2.png" style="max-width:50%;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Link+imagens</td>
+                            <td>[![Legenda](url da img)](url para a pagina)]</td>
+                            <td>Clique aqui <a href="https://www.youtube.com">
+                                <img src="https://camo.githubusercontent.com/fb936e68a052eca6a4a8cd34217732ae9c54d27b4f926cc0f46213270d9a8983/687474703a2f2f692e696d6775722e636f6d2f68524c75657a322e706e67" alt="me" 
+                                data-canonical-src="http://i.imgur.com/hRLuez2.png" style="max-width:50%;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Quebras de linha</td>
+                            <td>Double space + enter</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Listas não ordenadas</td>
+                            <td>* Item1     *Item 2</td>
+                            <td><ul><li>item1</li><li>item2</li></ul></td>
+                        </tr>
+                        <tr>
+                            <td>Listas Ordenadas</td>
+                            <td>1. Item a    2. Item b</td>
+                            <td style="padding-left: 38px;"><ol><li>item a</li><li>item b</li></ol></td>
+                        </tr>
+                        <tr>
+                            <td>Listas mistas</td>
+                            <td>1. Item 1      * item 1a</td>
+                            <td><ol style="padding-left: 22px;"><li>item a</li></ol><ul><li> item 1</li></ul></td>
+                        </tr>
+                        <tr>
+                            <td>Citação</td>
+                            <td>&gt; Texto citado</td>
+                            <td><blockquote>Minha citação</blockquote></td>
+                        </tr>
+                        <tr>
+                            <td>Código</td>
+                            <td>`Insira o código`</td>
+                            <td><code>cout&lt;&lt;"Hello world";</code></td>
+                        </tr>
+                        <tr>
+                            <td>Bloco de código/ Destaque de Sintaxe</td>
+                            <td>```Insira o código```</td>
+                            <td><img src="https://i.imgur.com/z8KrxAz.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Títulos</td>
+                            <td>#, ##, ###, ####, #####, ###### (from h1 to h6)</td>
+                            <td><h3><a id="user-content-isso-é-um-título-h3" class="anchor" aria-hidden="true" href="#isso-é-um-título-h3"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Isso é um título h3</h3></td>
+                        </tr>
+                        <tr>
+                            <td>Riscado</td>
+                            <td>~<s>Insira o texto aqui~</s></td>
+                            <td style="text-decoration: line-through;">Meu texto riscado</td>
+                        </tr>
+                        <tr>
+                            <td>Tabelas</td>
+                            <td>| Tables   |      Are      |  Cool | |----------|:-------------:|------:| | col 1 is|  left-aligned | $1600 |</td>
+                            <td><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/4a01e75ef0dd65df40cb77ed240a97bc8ff060aca35a155bb85cfae800c2e3cc/687474703a2f2f692e696d6775722e636f6d2f45497474376d682e706e67"><img src="https://camo.githubusercontent.com/4a01e75ef0dd65df40cb77ed240a97bc8ff060aca35a155bb85cfae800c2e3cc/687474703a2f2f692e696d6775722e636f6d2f45497474376d682e706e67" alt="" data-canonical-src="http://i.imgur.com/EItt7mh.png" style="max-width:100%;"></a></td>
+                        </tr>
+                    </table><br><br>
+                    <p>
+                        <span>Notas úteis</span> <br><br>
+                        <ul>
+                            <li>
+                                O Markdown nos permite utilizar escapes de <b>barra invertida</b> para gerar caracteres literais que teria um significado especial na
+                                sintaxe de formatação da Markdown.
+                                <p class="quote">Assim? \ * Este \ * não é mais itálico, mas é cercado por asteriscos literais.</p>
+                            </li>
+                            <br>
+                            <li>
+                                Os vídeos do Youtube requerem uma atenção especial
+                                <p class="quote">Eles não podem ser adicionados diretamente, mas você pode adicionar uma imagem com um link 
+                                    para o vídeo como este: <br>
+                                    <code>
+                                        &lt;a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE" 
+                                        target="_blank"&gt;
+                                            &lt;img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+                                            alt="Texto ALT da imagem aqui" width="240" height="180" border="10" /&gt;
+                                        &lt;/a&gt;
+                                    </code>
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                Markdown suporta Emoji 😆 😆 😘 😇 💚 ( obter alguns emojis <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">aqui</a> ).
+                            </li>
+                            <li>Você pode usar a tag <b>&lt;br/&gt;</b> para forçar uma quebra de linha.</li>
+                            <li>O espaço duplo, em seguida, se você quiser fazer uma nova linha se houver problemas para criar novas linhas.</li>
+                            <li>Ver não é tão bom como praticar. Você pode criar um arquivo de markdown para você praticar ou fazê-lo online <a href="https://www.markdowntutorial.com/">aqui.</a></li>
+                            <li>Qualquer URL (Como <a href="http://www.github.com/">http://www.github.com/</a> ) será automaticamente convertido em um link clicável.</li>
+                            <li>O suporte à tabela Markdown é projetado para lidar com a maioria das tabelas para a maioria das pessoas; não cobre todas as tabelas 
+                                para todas as pessoas. Se você precisa de tabelas complexas, você precisará criá-las manualmente ou com uma ferramenta especificamente 
+                                projetada para o formato de saída.
+                                <p class="quote">A tabela acima tivemos muito trabalho para torna-lá possível</p>
+                            </li>
+                        </ul>
+                    </p>
+                </div><!--description-text-->
+
+            </div><!--group-->           
+        </div><!--container-single-->
+
+        <div class="container-single">
+            <div class="group-single">
+                <p>Depois de entendermos o funcionamento do <b>Markdown</b>, iremos criar o nosso arquivo <b>README.md</b> para o nosso repositório.</p>
+                <div class="description-text">
+                    <p>
+                        <span>Utilizaremos o <a href="https://typora.io/">Typora</a>, para criarmos nosso README.</span> <br><br>
+                        Acesse o site e efeute o download do Typora, conforme seu sistema operacional.
+                    </p>
+                </div><!--description-text-->
+                <div class="img-typora">
+                    <img src="images/typora.jpg" alt="Typora" />
+                    <h6>Figura 17: Página de Download do Typora.</h6>
+                </div>
+
+                <div class="description-text">
+                    <p>
+                        Após a instalação do <b>Typora</b>, vamos abri-lo para começarmos a criar o nosso arquivo <b>README</b>.
+                    </p>
+                </div>
+
+                <div class="img-typora">
+                    <img src="images/typora-tela.jpg" alt="Typora" />
+                    <h6>Figura 18: Tela inicial do Typora.</h6>
+                </div>
+                
+                <div class="description-text">
+                    <p>
+                        <em><b>Observação:</b></em> O thema do meu Typora está difirente do padrão quando instalado, para mudar o tema, acesse o site
+                        novamente e vá no menu  <b>Themes</b> e escolha o tema que desejar configurar em seu Typora e seguir os passos descritos
+                        no tema escolhido. O tema que estou utilizando é o <b>Cobalt</b>.
+                        <br><br>
+                        Depois de aberto o Typora basta iniciar a descrição do seu REAMDE, lembrando que você pode utilizar as "tags" descritas
+                        na tabela a cima.
+                    </p>
+                </div>
+
+                <div class="img-typora">
+                    <img src="images/readme.jpg" alt="Typora" />
+                    <h6>Figura 19: REAMDE do nosso projeto.</h6>
+                </div>
+
+            </div><!--group-->           
+        </div><!--container-single-->
+
+        <!-- APÓS CRIAR O README CONTINUAREMOS DAQUI -->
+        <div class="commands-list">
+            <h3>Listando os repositórios remotos adicionados</h3>
+            <p class="commands-text"><span>Comando:</span> <em>git remote -v</em></p>
+            <p>
+                Com esse comando listamos os repositórios remotos adicionados com o comando <em>git remote add origin + link</em>
+            </p>
+            <p class="commands-text">
+                <em>git remote</em> - Gerencie o conjunto dos repositórios monitorados. <br>
+                <em>add</em> - Adiciona um ramo remoto chamado (nome) para o repositório na (url). <br><br>
+                <span>Observação:</span> O link do repositório é o HTTPS mostrado na Figura 14 do passo anterior.
+            </p>
+        </div><!--commands-list-->
+        <div class="images-project">
+            <img src="images/list-origem.jpg" alt="Listando remotos"/>
+            <h6>Figura 15: Adicionando origin no repositório Github<h6>
+        </div><!--images-project-->
+
+
+    </div><!--commands-wrapper-->
+    
+</body>
+</html>
